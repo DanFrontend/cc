@@ -3,5 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: [
     'vuetify'
   ],
-  publicPath: '/vue-converter-currency/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/currency-converter/'
+    : '/'
 })
